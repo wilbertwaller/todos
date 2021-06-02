@@ -3,10 +3,16 @@ import Todos from "./todos.js"
 
 (function() {
     const todos = new Todos()
-    const form = document.querySelector("form")
-    const clear = document.querySelector("#clear")
-    form.addEventListener("submit", handleSubmit)
-    clear.addEventListener("click", clearCompletedTodos)
+    
+    function init() {
+        const form = document.querySelector("form")
+        const clear = document.querySelector("#clear")
+        form.addEventListener("submit", handleSubmit)
+        clear.addEventListener("click", clearCompletedTodos)
+
+        load()
+        updateStats()
+    }
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -83,6 +89,5 @@ import Todos from "./todos.js"
         document.getElementById("total").innerText = total
     }
 
-    load()
-    updateStats()
+    init()
 })()
