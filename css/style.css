@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 400px;
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.todo-item, label {
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+}
